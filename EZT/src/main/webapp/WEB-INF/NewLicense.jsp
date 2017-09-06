@@ -5,7 +5,7 @@
 <html>
   <head>
     <title>新办营业执照</title>
-    
+    <link href="${app }/css/newLicense.css" rel="stylesheet"/>
   </head>
   
   <body>
