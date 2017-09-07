@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@include file="../base.jsp" %>
+<%@include file="../BaseTop.jsp"%>
 
 
 <html>
 <head>
-<title>易帐通</title>
+<title>易账通</title>
 <style>
 body {
 	text-align: center;
@@ -21,11 +21,13 @@ body a {
 </head>
 
 <body>
-	<span class="leftBtn"> <a href="${app }/NewLicense.jsp">新办营业执照</a>
-	</span>
+	<div class="leftBtn"> <a href="${app }/Admin/role/manage"
+		target="main">权限管理</a>
+	</div>
 	<br />
-	<span class="leftBtn"> <a href="${app }/ToProgressServlet">办理进度查询</a>
-	</span>
+	<div class="leftBtn"> <a href="${app }/Admin/user/manage"
+		target="main">用户管理</a>
+	</div>
 	<br />
 	<!-- <span>
 	  	<a href="#">代账</a>
@@ -61,8 +63,8 @@ body a {
 
 </body>
 <script type="text/javascript">
-$(function(){
-	$('.leftBtn').fontFlex(10, 40, 10);
-})
+	$(function() {
+		$('.leftBtn').fontFlex(10, 40, 10);
+	})
 </script>
 </html>

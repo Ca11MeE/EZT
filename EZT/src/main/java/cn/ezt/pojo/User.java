@@ -1,6 +1,8 @@
 package cn.ezt.pojo;
 
-public class User {
+import com.fasterxml.jackson.databind.deser.Deserializers.Base;
+
+public class User extends BaseInfo{
 	private String userId; //用户ID
 	private String username; //用户登录名
 	private String password; //用户密码
@@ -8,6 +10,15 @@ public class User {
 	private String gender;	//用户性别
 	private String telephone; //用户手机号
 	private String address; //用户地址
+	private Role role;
+	
+	
+	public Role getRole() {
+		return role;
+	}
+	public void setRole(Role role) {
+		this.role = role;
+	}
 	public String getUserId() {
 		return userId;
 	}
@@ -53,8 +64,9 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", name=" + name
-				+ ", gender=" + gender + ", telephone=" + telephone + ", address=" + address + "]";
+				+ ", gender=" + gender + ", telephone=" + telephone + ", address=" + address + ", role=" + role + "]";
 	}
+
 	
 	
 }
