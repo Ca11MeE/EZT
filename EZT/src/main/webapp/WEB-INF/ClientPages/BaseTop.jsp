@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" rev="stylesheet"
 	href="${app}/css/btns.css">
 <script src="${app}/js/jquery-3.2.1.js" type="text/javascript"></script>
-<script language="javascript" src="${app}/js/bootstrap.js"></script>
-<script language="javascript" src="${app}/js/ItemFlex.js"></script>
+<script src="${app}/js/jquery-1.4.2.js" type="text/javascript"></script>
+<script  src="${app}/js/bootstrap.js" type="text/javascript"></script>
+<script  src="${app}/js/ItemFlex.js" type="text/javascript"></script>
 

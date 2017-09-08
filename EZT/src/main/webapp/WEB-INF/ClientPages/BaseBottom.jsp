@@ -13,4 +13,7 @@
 	function checkAll() {
 		$(".roleId").attr("checked",$("#all").attr("checked") );
 	}
+	$("#valiimg").click(function(){
+		$(this).attr("src","/img/valiImg.action"+Math.random());
+	});
 </script>

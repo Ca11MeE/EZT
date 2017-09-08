@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-
+<%@include file="../../BaseTop.jsp" %>
 
 <!DOCTYPE HTML>
 <html>
@@ -10,23 +10,23 @@
   
   <body>
    	 <div style="margin-top: 100px">
-		<form action="" method="post">
+		<form action="${app }/order/newLicenseOrder.action" method="post">
 			<table>
 				<tr>
-					<td class="tds">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;：</td>
-					<td><input type="text" name="username" /></td>
+					<td class="tds">申办人或申办公司名称：</td>
+					<td><input type="text" name="createrName" /></td>
 				</tr>
 				<tr>
 					<td class="tds">手机号码：</td>
-					<td><input type="text" name="phone" /></td>
+					<td><input type="text" name="telephone" /></td>
 				</tr>
 				<tr>
-					<td class="tds">联系地址：</td>
-					<td><input type="text" name="address" /></td>
+					<td class="tds">公司地址：</td>
+					<td><input type="text" name="deptAddr" /></td>
 				</tr>
 				<tr>
 					<td class="tds">公司名称：</td>
-					<td><input type="text" name="company_name" /></td>
+					<td><input type="text" name="deptName" /></td>
 				</tr>
 				<tr>
 					<td class="sub_td" colspan="2">
@@ -39,3 +39,4 @@
    	 
   </body>
 </html>
+<%@include file="../../BaseBottom.jsp" %>

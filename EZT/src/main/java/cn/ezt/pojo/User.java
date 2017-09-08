@@ -10,7 +10,7 @@ public class User extends BaseInfo{
 	private String gender;	//用户性别
 	private String telephone; //用户手机号
 	private String address; //用户地址
-	private Role role;
+	private Role role; //用户权限
 	
 	
 	public Role getRole() {

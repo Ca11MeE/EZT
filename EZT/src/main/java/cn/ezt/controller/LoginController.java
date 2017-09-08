@@ -35,7 +35,13 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/login")
-	public String login(String username,String password,Model model,HttpSession session) {
+	public String login(String username,String password,String valistr,Model model,HttpSession session) {
+		//检查验证码
+		String realStr=(String) session.getAttribute("valistr");
+		if (realStr==null||!realStr.equalsIgnoreCase(valistr)) {
+			model.addAttribute("errMsg","验证码不正确");
+			return "/login";
+		}
 		if (StringUtils.isEmpty(username)||StringUtils.isEmpty(password)) {
 			model.addAttribute("errMsg","用户名或密码不能为空");
 			return "/login";
@@ -55,7 +61,7 @@ public class LoginController {
 		}
 		
 		
-		return "redirect:/Admin/AdminInfo.action";
+		return "redirect:/Admin/AdminInfo.action"; 
 	}
 	
 	//登出操作
@@ -64,4 +70,6 @@ public class LoginController {
 		session.setAttribute("user", null);
 		return "redirect:/tologin";
 	}
+	
+	
 }

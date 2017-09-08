@@ -1,8 +1,8 @@
 package cn.ezt.pojo;
 
 public class Role extends BaseInfo{
-	private String roleId;
-	private String roleName;
+	private String roleId; //权限ID
+	private String roleName; //权限名
 	 private String  adminRole; //超级管理员权限 '0:关闭    1:打开',
 	 private String  rootRole;//管理员权限 '0:关闭    1:打开',
 	 private String  agentRole;//业务员权限'0:关闭    1:打开',

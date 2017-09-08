@@ -12,11 +12,10 @@
     
     
     $.fn.marginFlex=function (persent) {
-    	var $this = this;
 		var wh = document.documentElement.clientHeight;
-		var eh = $this.style.height();
+		var eh = $(this).height();
 		height=((wh-eh)*persent)+'px';
-		$this.css("margin-top",height);
+		$(this).css("margin-top",height);
 		};
 
 })(jQuery);

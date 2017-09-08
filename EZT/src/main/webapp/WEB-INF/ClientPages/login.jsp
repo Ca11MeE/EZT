@@ -19,8 +19,9 @@
 	  <form id="loginFrm" class="submitFrm" method="POST" >
 		<table align="center">
 		<tr>
-			<td colspan="2"><span> <a
-						style="margin-top: 10%; background-color: white; color: red;">${errMsg }</a>
+			<td colspan="2" align="center"><span> <c:if test="${not empty errMsg }">
+							<a style="margin-top: 10%; background-color: white; color: red;">${errMsg }</a>
+						</c:if>
 				</span></td>
 		</tr>
 			
@@ -44,13 +45,13 @@
 				</tr>
 				<tr>
 					<td align="center" colspan="2">
-						<img id="valiimg" src="${app }/img/regist/yzm.jpg"/>
+						<img id="valiimg" src="${app }/img/valiImg.action"/>
 						</td>
 					</tr>
 				<tr>
 					<td id="smbtn" colspan="2">
 						<span id="regist" style="margin-right:20%;">
-							<input type="button" onclick="formSubmit('${app }/regist.action','_self');" value="注册"/>
+							<input type="button" onclick="formSubmit('${app }/toregist.action','_self');" value="注册"/>
 						</span>
 					
 						<span id="login" style="margin-left:20%;">

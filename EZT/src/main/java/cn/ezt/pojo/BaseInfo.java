@@ -3,10 +3,10 @@ package cn.ezt.pojo;
 import java.util.Date;
 
 public class BaseInfo {
-	private Date createTime;
-	private String createBy;
-	private Date updateTime;
-	private String updateBy;
+	private Date createTime; //创建时间
+	private String createBy; //创建人
+	private Date updateTime; //更新时间
+	private String updateBy; //更新人
 	public Date getCreateTime() {
 		return createTime;
 	}
