@@ -9,11 +9,48 @@
 
 </head>
 
-<body style="background-color:black;font-size:40px;text-align:center;color:white;">
+<body style="background-color: black; text-align: center; color: white;height:auto">
 
-	<div>易账通<input type="button" value="注销" onclick="formSubmit('${app }/logout.action','_parent');"/>
-	</div>
-	<form class="submitFrm" method="post"></form>
-</body>
-<%@include file="../BaseBottom.jsp" %>
-</html>
+		<div id="pageTitle">
+			易账通<input type="button" value="注销"
+				onclick="formSubmit('${app }/logout.action','_parent');" />
+		</div>
+		<form class="submitFrm" method="post"></form>
+		<div>
+			<span class="leftBtn"> <a href="${app }/userInfo/newLicense"
+				target="main">新办营业执照</a>
+			</span> <span class="leftBtn"> <a href="${app }/userInfo/toProgress"
+				target="main">办理进度查询</a>
+			</span>
+			<!-- <span>
+	  	<a href="#">代账</a>
+	  </span>
+	  
+	  <span>
+	  	<a href="#">年报</a>
+	  </span>
+	  
+	  <span>
+	  	<a href="#">变更</a>
+	  </span>
+	  
+	  <span>
+	  	<a href="#">社保</a>
+	  </span>
+	  
+	  <span>
+	  	<a href="#">营业执照查询</a>
+	  </span>
+	  
+	  <span>
+	  	<a href="#">国税</a>
+	  </span>
+	  
+	  <span>
+	  	<a href="#">地税</a>
+	  </span>
+	   -->
+
+		</div>
+		
+		

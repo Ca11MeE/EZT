@@ -7,14 +7,16 @@
     <title>易账通用户界面</title>
 
   </head>
-  <frameset rows="10%,*" name="topSet" border="1px black bolder">
-	<frame name="top" scrolling="no"  target="middleSet" src="${app }/userInfo/title.action">	
-	<frameset cols="20%,*" height="100%" name="middle" frameborder="no" border="1px blsack bolder" framespacing="0">
+  <%-- <frameset rows="15%,*" name="topSet" border="1px black bolder" framespacing="0" >
+	<frame name="top" scrolling="no" noresize="noresize" target="main" src="${app }/userInfo/title.action" style="height:auto;">	
+	<!-- <frameset rows="5%,*" height="100%" name="middle" frameborder="no" border="1px blsack bolder" framespacing="0"> -->
 		<frame name="left" class="leftFrame" target="main" scrolling="no" src="${app }/userInfo/left.action" />
 		<frame name="main" class="rightFrame" src="${app }/userInfo/main.action" />
-	</frameset>
+	<!-- </frameset> -->
+</frameset> --%>
+<frameset rows="100%" name="topSet" border="1px black bolder" framespacing="0" >
+<frame name="main" class="rightFrame" src="${app }/userInfo/main.action" />
 </frameset>
   <body>
-	  你的浏览器不支持此框架,请更换浏览器
   </body>
 </html>

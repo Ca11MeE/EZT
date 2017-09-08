@@ -14,4 +14,10 @@ public interface UserMapper {
 
 	
 	public User findUserByUP(@Param("username")String username, @Param("password")String password);
+
+	
+	public void createUser(User user);
+
+	@Select("select username from user where username=#{userName}")
+	public User findUserName(String userName);
 }

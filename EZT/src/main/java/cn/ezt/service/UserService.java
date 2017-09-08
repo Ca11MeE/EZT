@@ -10,4 +10,8 @@ public interface UserService {
 
 	User findUserByUP(String username, String password);
 
+	void createUser(User user);
+
+	User findUserName(String userName);
+
 }
