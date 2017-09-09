@@ -1,6 +1,5 @@
 package cn.ezt.pojo;
 
-import com.fasterxml.jackson.databind.deser.Deserializers.Base;
 
 public class User extends BaseInfo{
 	private String userId; //用户ID

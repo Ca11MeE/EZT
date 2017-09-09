@@ -14,7 +14,7 @@
 		<spring.version>4.2.3.RELEASE</spring.version>
 
 		<mybatis.version>3.2.8</mybatis.version>
-		<mybatis.spring.version>1.2.2</mybatis.spring.version>
+		<mybatis.spring.version>1.3.1</mybatis.spring.version>
 		<mybatis.paginator.version>1.2.15</mybatis.paginator.version>
 		<mysql.version>5.1.32</mysql.version>
 		<bonecp-spring.version>0.8.0.RELEASE</bonecp-spring.version>
@@ -30,9 +30,18 @@
 		<jsp-api.version>2.0</jsp-api.version>
 		<jackson.version>2.4.2</jackson.version>
 		<shrio.version>1.4.0</shrio.version>
+		<tomcat.version>7.0.81</tomcat.version>
 	</properties>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -68,11 +77,14 @@
 			<artifactId>mybatis</artifactId>
 			<version>${mybatis.version}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
 			<version>${mybatis.spring.version}</version>
 		</dependency>
+
+
 		<dependency>
 			<groupId>com.github.miemiedev</groupId>
 			<artifactId>mybatis-paginator</artifactId>
@@ -154,6 +166,8 @@
 				<configuration>
 					<port>8090</port>
 					<path>/</path>
+					<uriEncoding>UTF-8</uriEncoding>
+					<server>tomcat7</server>
 				</configuration>
 			</plugin>
 		</plugins>

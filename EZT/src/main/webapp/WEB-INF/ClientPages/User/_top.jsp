@@ -59,7 +59,7 @@
 		<div id="content">
 			<ul>
 				<li><a href="${app }/login.action">首页</a></li>
-				<li> <a href="${app }/userInfo/newLicense"
+				<li> <a href="${app }/userInfo/toNewLicense"
 				target="main">新办营业执照</a></li>
 				<li><a href="${app }/userInfo/toProgress"
 				target="main">办理进度查询</a></li>
