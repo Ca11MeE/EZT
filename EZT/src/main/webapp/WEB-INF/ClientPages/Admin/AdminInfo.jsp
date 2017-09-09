@@ -8,10 +8,10 @@
 
   </head>
   <frameset rows="10%,*" name="topSet" border="1px black bolder">
-	<frame name="top" scrolling="no" noresize="resize" target="middleSet" src="${app }/Admin/title.action">	
-	<frameset cols="20%,*" height="100%" name="middle" frameborder="no" border="1px blsack bolder" framespacing="0">
-		<frame name="left" class="leftFrame" target="main" scrolling="no" noresize="resize" src="${app }/Admin/left.action" />
-		<frame name="main" class="rightFrame" noresize="resize" src="${app }/Admin/main.action" />
+	<frame name="top" id="top" scrolling="no" noresize="resize" target="middleSet" src="${app }/Admin/title.action">	
+	<frameset cols="20%,*" height="100%" name="middle" id="middle" frameborder="no" border="1px blsack bolder" framespacing="0">
+		<frame name="left" id="left" class="leftFrame" target="main" scrolling="no" noresize="resize" src="${app }/Admin/left.action" />
+		<frame name="main" id="main" class="rightFrame" noresize="resize" src="${app }/Admin/main.action" />
 	</frameset>
 </frameset>
   <body>

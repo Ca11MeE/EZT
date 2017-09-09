@@ -20,4 +20,7 @@ public interface UserMapper {
 
 	@Select("select username from user where username=#{userName}")
 	public User findUserName(String userName);
+
+
+	public List<User> findUserAndRole();
 }

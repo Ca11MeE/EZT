@@ -21,6 +21,17 @@
 		where u.username=#{username} and
 		u.password=#{password}
 	</select>
+	
+	<select id="findUserAndRole" resultMap="userRM">
+		select
+		u.*,
+		ri.*
+		from
+		user u
+		left join user_role ur on u.user_id=ur.user_id
+		left join role_info ri
+		on ri.role_id=ur.role_id
+	</select>
 
 	<insert id="createUser">
 		insert into user(

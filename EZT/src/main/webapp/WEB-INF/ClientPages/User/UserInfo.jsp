@@ -14,9 +14,7 @@
 		<frame name="main" class="rightFrame" src="${app }/userInfo/main.action" />
 	<!-- </frameset> -->
 </frameset> --%>
-<frameset rows="100%" name="topSet" border="1px black bolder" framespacing="0" >
-<frame name="main" class="rightFrame" src="${app }/userInfo/main.action" />
-</frameset>
   <body>
+  <%@include file="_main.jsp" %>
   </body>
 </html>

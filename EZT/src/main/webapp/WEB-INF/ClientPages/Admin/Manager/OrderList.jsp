@@ -3,7 +3,7 @@
 <%@ include file="../../BaseTop.jsp"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>权限列表</title>
+	<title>订单列表</title>
 </head>
 
 <body>
@@ -25,11 +25,11 @@
 	<tr>
 		<td class="tableHeader"><input type="checkbox" id="all" name="selid"  ></td>
 		<td class="tableHeader">序号</td>
-		<td class="tableHeader">权限名称</td>
-		<td class="tableHeader">超级管理员权限</td>
-		<td class="tableHeader">管理员权限</td>
-		<td class="tableHeader">员工权限</td>
-		<td class="tableHeader">用户权限</td>
+		<td class="tableHeader">申办人或申办公司名称</td>
+		<td class="tableHeader">公司名称</td>
+		<td class="tableHeader">公司地址</td>
+		<td class="tableHeader">联系电话</td>
+		<td class="tableHeader">业务员</td>
 		<td class="tableHeader">创建时间</td>
 		<td class="tableHeader">创建人</td>
 		<td class="tableHeader">更新时间</td>
@@ -38,33 +38,29 @@
 	</thead>
 	<tbody class="tableBody" >
 	
-	<c:forEach items="${roles}" var="r" varStatus="status">
+	<c:forEach items="${orders}" var="o" varStatus="status">
 	<tr class="odd" onmouseover="this.className='highlight'" onmouseout="this.className='odd'">
-		<td><input type="checkbox" class="roleId" name="roleId" value="${r.roleId}"/></td>
+		<td><input type="checkbox" class="orderId" name="orderId" value="${o.orderId}"/></td>
 		<td>${status.index+1}</td>
 		<td>
-			${r.roleName }
+			${o.createrName }
 		</td>
 		<td>
-			<c:if test="${r.adminRole eq 1}"><font color="green">启用</font></c:if>
-			<c:if test="${r.adminRole eq 0}"><font color="green">停用</font></c:if>
+			${o.deptName }
 		</td>
 		<td>
-			<c:if test="${r.rootRole eq 1}"><font color="green">启用</font></c:if>
-			<c:if test="${r.rootRole eq 0}"><font color="green">停用</font></c:if>
+			${o.deptAddr }
 		</td>
 		<td>
-			<c:if test="${r.agentRole eq 1}"><font color="green">启用</font></c:if>
-			<c:if test="${r.agentRole eq 0}"><font color="green">停用</font></c:if>
+			${o.telephone }
 		</td>
 		<td>
-			<c:if test="${r.userRole eq 1}"><font color="green">启用</font></c:if>
-			<c:if test="${r.userRole eq 0}"><font color="green">停用</font></c:if>
+			${o.agentId }
 		</td>
-		<td><fmt:formatDate value="${r.createTime }" pattern="yyyy-MM-dd"/></td>
-		<td>${r.createBy }</td>
-		<td><fmt:formatDate value="${r.updateTime }" pattern="yyyy-MM-dd"/></td>
-		<td>${r.updateBy }</td>
+		<td><fmt:formatDate value="${o.createTime }" pattern="yyyy-MM-dd"/></td>
+		<td>${o.createBy }</td>
+		<td><fmt:formatDate value="${o.updateTime }" pattern="yyyy-MM-dd"/></td>
+		<td>${o.updateBy }</td>
 	</tr>
 	</c:forEach>
 	

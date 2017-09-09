@@ -14,4 +14,6 @@ public interface UserService {
 
 	User findUserName(String userName);
 
+	List<User> findUserAndRole();
+
 }

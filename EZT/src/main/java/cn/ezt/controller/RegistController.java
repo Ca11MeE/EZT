@@ -28,6 +28,7 @@ public class RegistController {
 	// 注册操作
 	@RequestMapping("/regist")
 	public String regist(User user, String password2,String valistr,Model model,HttpSession session) {
+		model.addAttribute("reguser",user);
 		//判断验证码
 		String realStr=(String) session.getAttribute("valistr");
 		if (!realStr.equalsIgnoreCase(valistr)) {

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ezt.mapper.OrderMapper">
+
+	<sql id="base">
+		#{createTime},
+		#{createBy},
+		#{updateTime},
+		#{updateBy}
+	</sql>
+
+	<insert id="createOrder">
+		insert into order_list(
+		order_id,
+		state_id,
+		dept_name,
+		dept_addr,
+		creater_name,
+		telephone,
+		agent_id,
+		create_time,
+		create_by,
+		update_time,
+		update_by
+		)values(
+		#{orderId},
+		#{stateId},
+		#{deptName},
+		#{deptAddr},
+		#{createrName},
+		#{telephone},
+		#{agentId},
+		<include refid="base"></include>
+		)
+	</insert>
+	
+	<select id="findAll" resultType="order">
+		select * from order_list
+	</select>
+</mapper>

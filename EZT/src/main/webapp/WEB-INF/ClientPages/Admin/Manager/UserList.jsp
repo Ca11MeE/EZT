@@ -3,7 +3,7 @@
 <%@ include file="../../BaseTop.jsp"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>权限列表</title>
+	<title>用户列表</title>
 </head>
 
 <body>
@@ -25,10 +25,11 @@
 	<tr>
 		<td class="tableHeader"><input type="checkbox" id="all" name="selid"  ></td>
 		<td class="tableHeader">序号</td>
-		<td class="tableHeader">权限名称</td>
-		<td class="tableHeader">超级管理员权限</td>
-		<td class="tableHeader">管理员权限</td>
-		<td class="tableHeader">员工权限</td>
+		<td class="tableHeader">用户登录名</td>
+		<td class="tableHeader">用户真实姓名</td>
+		<td class="tableHeader">用户性别</td>
+		<td class="tableHeader">用户手机号</td>
+		<td class="tableHeader">用户地址</td>
 		<td class="tableHeader">用户权限</td>
 		<td class="tableHeader">创建时间</td>
 		<td class="tableHeader">创建人</td>
@@ -38,33 +39,34 @@
 	</thead>
 	<tbody class="tableBody" >
 	
-	<c:forEach items="${roles}" var="r" varStatus="status">
+	<c:forEach items="${users}" var="u" varStatus="status">
 	<tr class="odd" onmouseover="this.className='highlight'" onmouseout="this.className='odd'">
-		<td><input type="checkbox" class="roleId" name="roleId" value="${r.roleId}"/></td>
+		<td><input type="checkbox" class="userId" name="userId" value="${u.userId}"/></td>
 		<td>${status.index+1}</td>
 		<td>
-			${r.roleName }
+			${u.username }
 		</td>
 		<td>
-			<c:if test="${r.adminRole eq 1}"><font color="green">启用</font></c:if>
-			<c:if test="${r.adminRole eq 0}"><font color="green">停用</font></c:if>
+			${u.name }
 		</td>
 		<td>
-			<c:if test="${r.rootRole eq 1}"><font color="green">启用</font></c:if>
-			<c:if test="${r.rootRole eq 0}"><font color="green">停用</font></c:if>
+			<c:if test="${u.gender eq '男'}">男</c:if>
+			<c:if test="${u.gender eq '女'}">女</c:if>
 		</td>
 		<td>
-			<c:if test="${r.agentRole eq 1}"><font color="green">启用</font></c:if>
-			<c:if test="${r.agentRole eq 0}"><font color="green">停用</font></c:if>
+			${u.telephone }
 		</td>
 		<td>
-			<c:if test="${r.userRole eq 1}"><font color="green">启用</font></c:if>
-			<c:if test="${r.userRole eq 0}"><font color="green">停用</font></c:if>
+			${u.address }
 		</td>
-		<td><fmt:formatDate value="${r.createTime }" pattern="yyyy-MM-dd"/></td>
-		<td>${r.createBy }</td>
-		<td><fmt:formatDate value="${r.updateTime }" pattern="yyyy-MM-dd"/></td>
-		<td>${r.updateBy }</td>
+		<td>
+			<c:if test="${u.role.userRole eq 1 }"><font color="green">用户</font></c:if>
+			<c:if test="${u.role.userRole eq 0 }"><font color="red">非用户</font></c:if>
+		</td>
+		<td><fmt:formatDate value="${u.createTime }" pattern="yyyy-MM-dd"/></td>
+		<td>${u.createBy }</td>
+		<td><fmt:formatDate value="${u.updateTime }" pattern="yyyy-MM-dd"/></td>
+		<td>${u.updateBy }</td>
 	</tr>
 	</c:forEach>
 	

@@ -21,12 +21,16 @@ body a {
 </head>
 
 <body>
-	<div class="leftBtn"> <a href="${app }/Admin/role/manage"
-		target="main">权限管理</a>
+	<div class="leftBtn">
+		<a href="${app }/Admin/role/manage.action" target="main">权限管理</a>
 	</div>
 	<br />
-	<div class="leftBtn"> <a href="${app }/Admin/user/manage"
-		target="main">用户管理</a>
+	<div class="leftBtn">
+		<a href="${app }/Admin/user/manage.action" target="main">用户管理</a>
+	</div>
+	<br />
+	<div class="leftBtn">
+		<a href="${app }/Admin/order/manage.action" target="main">订单管理</a>
 	</div>
 	<br />
 	<!-- <span>
@@ -67,4 +71,5 @@ body a {
 		$('.leftBtn').fontFlex(10, 40, 10);
 	})
 </script>
+<%@include file="../BaseBottom.jsp"%>
 </html>

@@ -28,6 +28,11 @@ public class UserServiceImpl implements UserService {
 	public List<User> findAll() {
 		return userMapper.findAll();
 	}
+	
+	@Override
+	public List<User> findUserAndRole() {
+		return userMapper.findUserAndRole();
+	}
 
 	@Override
 	public User findUserByUP(String username, String password) {
@@ -74,5 +79,7 @@ public class UserServiceImpl implements UserService {
 	public User findUserName(String userName) {
 		return userMapper.findUserName(userName);
 	}
+
+	
 
 }

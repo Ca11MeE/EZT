@@ -173,7 +173,7 @@
 								$("#headErr").html(headMsg);
 							}
 						});
-				
+
 			})
 </script>
 </head>
@@ -182,9 +182,8 @@
 	<form id="registFrm" class="submitFrm" method="POST"
 		style="margin-top: 0px;">
 		<div align="center"
-			style="font-family: 微软雅黑; color: red; font-size: 20px;"
-			id="headErr"></div>
-		<table align="center" border="0" style="width: 100%;margin-top:0%">
+			style="font-family: 微软雅黑; color: red; font-size: 20px;" id="headErr"></div>
+		<table align="center" border="0" style="width: 100%; margin-top: 0%">
 			<tr>
 				<td colspan="3" align="center"><span> <c:if
 							test="${not empty errMsg }">
@@ -196,13 +195,13 @@
 			<tr>
 				<td>用户名:</td>
 				<td><input name="username" id="username" type="text"
-					class="info" /></td>
+					class="info" value="${reguser.username }" /></td>
 				<td><span id="usernameChk" class="chks"></span></td>
 			</tr>
 			<tr>
 				<td>密码:</td>
 				<td><input name="password" id="password" type="password"
-					class="info" /></td>
+					class="info" value="${reguser.password }" /></td>
 				<td><span id="passwordChk" class="chks"></span></td>
 			</tr>
 			<tr>
@@ -212,27 +211,22 @@
 			</tr>
 			<tr>
 				<td>姓名:</td>
-				<td><input name="name" id="name" type="text" class="info"></td>
+				<td><input name="name" id="name" type="text" class="info"
+					value="${reguser.name }"></td>
 				<td><span id="nameChk" class="chks"></span></td>
 			</tr>
 			<tr>
 				<td>性别:</td>
-				<td><select name="gender">
-						<option value="男" selected="selected">男</option>
-						<option value="女">女</option>
+				<td><select name="gender" >
+						<option value="男" <c:if test="${reguser.gender eq '男' }">selected='selected'</c:if>>男</option>
+						<option value="女" <c:if test="${reguser.gender eq '女' }">selected='selected'</c:if>>女</option>
 				</select></td>
 			</tr>
 			<tr>
 				<td>电话号码:</td>
 				<td><input type="text" name="telephone" id="telephone"
-					value="请输入您的手机号" class="info" /></td>
+					value="请输入您的手机号" class="info" value="${reguser.telephone }/></td>
 				<td><span id="telephoneChk" class="chks"></span></td>
-			</tr>
-			<tr>
-				<td>地址:</td>
-				<td colspan="2"><textarea name="address" id="address" rows="3"
-						cols="20" style="width: 100%;" class="info">请输入您的地址</textarea></td>
-				<td><span id="addressChk" class="chks"></span></td>
 			</tr>
 			<tr>
 				<td>验证码:</td>
