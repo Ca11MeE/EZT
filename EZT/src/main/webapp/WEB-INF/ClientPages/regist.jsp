@@ -22,9 +22,6 @@
 	width: 100%;
 }
 
-.chks {
-	color: red;
-}
 </style>
 <script type="text/javascript">
 	$(
@@ -113,11 +110,13 @@
 								"userName" : username
 							},
 							success : function(data) {
+								$("#usernameChk").attr({"width":"20px","height":"20px"});
 								if (data != 0) {
-									$("#usernameChk").html("用户名已存在");
+									
+									$("#usernameChk").attr("src","${app}/icon/unright.png");
 									$(this).val("");
 								} else {
-									$("#usernameChk").html("恭喜你,用户名可以使用");
+									$("#usernameChk").attr("src","${app}/icon/right.png");
 								}
 							},
 							error : function() {
@@ -196,7 +195,7 @@
 				<td>用户名:</td>
 				<td><input name="username" id="username" type="text"
 					class="info" value="${reguser.username }" /></td>
-				<td><span id="usernameChk" class="chks"></span></td>
+				<td><img id="usernameChk"></td>
 			</tr>
 			<tr>
 				<td>密码:</td>
@@ -234,7 +233,11 @@
 					value="请输入验证码" /></td>
 				<td align="center" colspan="1"><img id="valiimg"
 					src="${app }/img/valiImg.action" /></td>
-				<td><span id="valistrChk" class="chks"></span></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td style="font-size:10px;text-align:center;">点击图片更换验证码</td>
 			</tr>
 			<tr>
 				<td id="smbtn" colspan="2"><span id="regist"

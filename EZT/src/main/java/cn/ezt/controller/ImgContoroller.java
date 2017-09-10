@@ -1,9 +1,12 @@
 package cn.ezt.controller;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -12,6 +15,8 @@ import org.omg.CORBA.portable.ValueInputStream;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.sun.net.httpserver.HttpContext;
 
 import cn.ezt.tools.ValiImg;
 
@@ -28,4 +33,5 @@ public class ImgContoroller {
 		} catch (IOException e) {
 		}
 	}
+	
 }

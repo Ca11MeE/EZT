@@ -12,6 +12,7 @@ body{
 #common_head{
 	margin:0px;
 	font-family:"微软雅黑";
+	width:100%;
 }
 /*第一行*/
 #common_head #line1{

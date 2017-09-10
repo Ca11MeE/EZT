@@ -13,8 +13,7 @@ import cn.ezt.service.AgreementService;
 @RequestMapping("/userInfo")
 public class UserInfoController {
 	
-	@Autowired
-	AgreementService agreementService;
+	
 	
 	@RequestMapping("/title")
 	public String title() {
@@ -30,20 +29,10 @@ public class UserInfoController {
 		return "/User/_left";
 	}
 	
-	@RequestMapping("/toNewLicense")
-	public String toNewLicense(Model model) {
-		//获取用户协议
-		String agreement = agreementService.getAgreement("License");
-		model.addAttribute("UserAgreement",agreement);
-		return "/User/License/UserAgreement";
+	@RequestMapping("/toLicenseSelect")
+	public String toLicenseSelect() {
+		return "/User/License/LicenseSelect";
 	}
 	
-	@RequestMapping("/newLicense")
-	public String newLicense(String agree) {
-		//验证是否勾选同意
-		System.out.println(agree);
-		//勾选了同意
-		return "/User/License/NewLicense";
-		//没有勾选同意则提示并跳回本页面
-	}
+	
 }

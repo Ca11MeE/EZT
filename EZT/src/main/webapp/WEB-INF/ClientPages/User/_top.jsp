@@ -6,7 +6,11 @@
 <html>
 <head>
 <title>易账通</title>
-
+<style type="text/css">
+div{
+		width:100%;
+}
+</style>
 <link rel="stylesheet" type="text/css" rev="stylesheet"
 	href="${app}/css/top.css">
 </head>
@@ -59,9 +63,9 @@
 		<div id="content">
 			<ul>
 				<li><a href="${app }/login.action">首页</a></li>
-				<li> <a href="${app }/userInfo/toNewLicense"
+				<li> <a href="${app }/userInfo/toLicenseSelect.action"
 				target="main">新办营业执照</a></li>
-				<li><a href="${app }/userInfo/toProgress"
+				<li><a href="${app }/userInfo/toProgress.action"
 				target="main">办理进度查询</a></li>
 				<%-- <li><a href="${app }/servlet/BackProdPageServlet?cate=1">床上用品</a></li>
 				<li><a href="${app }/servlet/BackProdPageServlet?cate=2">家用电器</a></li>

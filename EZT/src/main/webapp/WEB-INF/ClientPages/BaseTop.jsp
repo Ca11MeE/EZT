@@ -9,4 +9,5 @@
 <script src="${app}/js/jquery-3.2.1.js" type="text/javascript"></script>
 <script  src="${app}/js/bootstrap.js" type="text/javascript"></script>
 <script  src="${app}/js/ItemFlex.js" type="text/javascript"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 

@@ -5,18 +5,18 @@
 <%@include file="../../BaseTop.jsp"%>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>用户协议</title>
+<title>用户条款</title>
 <script type="text/javascript">
 	$(function() {
-		$("#agree").click(function() {
-			if ($(this).attr("checked") == "checked") {
+		$("#agree").change(function() {
+			if ($(this).is(':checked')) {
 				$("#next").attr("disabled", false);
 			} else {
 				$("#next").attr("disabled", true);
 			}
 		});
 		$("#next").click(function() {
-			formSubmit("${app}/userInfo/newLicense", "_self");
+			formSubmit("${app}/License/PersonBusiness", "_self");
 		});
 	})
 </script>
@@ -30,9 +30,13 @@
 		</span>
 	</div>
 	<textarea rows="50" cols="50" style="width: 100%; height: 80%;" readonly="readonly">${UserAgreement}</textarea>
-	<input type="checkbox" id="agree" name="agree" value="我已同意该协议" />
 	<div align="center">
+	<form class="submitFrm">
+	<input type="checkbox" id="agree" name="agree"/>我愿意遵守以上条款
+	<br/>
+	
 		<input type="button" id="next" disabled="disabled" value="下一步" />
+	</form>
 	</div>
 	<%@include file="../_bottom.jsp"%>
 </body>

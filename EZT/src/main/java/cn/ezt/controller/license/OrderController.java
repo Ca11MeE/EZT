@@ -30,7 +30,7 @@ public class OrderController {
 		String reg="1[34578]\\d{9}";
 		if (!order.getTelephone().matches(reg)) {
 			model.addAttribute("errMsg","电话号码格式不正确"); 
-			return "/User/License/NewLicense";
+			return "/User/License/LicenseSelect";
 		}
 		orderService.createOrder(order,user);
 		return "/User/_main";

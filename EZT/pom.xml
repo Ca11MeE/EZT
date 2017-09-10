@@ -30,16 +30,9 @@
 		<jsp-api.version>2.0</jsp-api.version>
 		<jackson.version>2.4.2</jackson.version>
 		<shrio.version>1.4.0</shrio.version>
-		<tomcat.version>7.0.81</tomcat.version>
 	</properties>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-catalina</artifactId>
-			<version>${tomcat.version}</version>
-		</dependency>
 
 
 		<dependency>
@@ -166,8 +159,6 @@
 				<configuration>
 					<port>8090</port>
 					<path>/</path>
-					<uriEncoding>UTF-8</uriEncoding>
-					<server>tomcat7</server>
 				</configuration>
 			</plugin>
 		</plugins>

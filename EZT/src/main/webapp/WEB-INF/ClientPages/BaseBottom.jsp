@@ -6,12 +6,8 @@
 		$('.submitFrm').submit();
 		return true;
 	}
-	
-	$("#all").click(function(){
-		$(".roleId").attr("checked",$(this).attr("checked"));
-	});
-	function checkAll() {
-		$(".roleId").attr("checked",$("#all").attr("checked") );
+	function checkAll(item) {
+		$("."+item).attr("checked",$("#all").is(':checked') );
 	}
 	$("#valiimg").click(function(){
 		$(this).attr("src","/img/valiImg.action"+Math.random());
