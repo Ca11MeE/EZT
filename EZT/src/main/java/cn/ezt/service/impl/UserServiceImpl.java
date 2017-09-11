@@ -80,6 +80,11 @@ public class UserServiceImpl implements UserService {
 		return userMapper.findUserName(userName);
 	}
 
+	@Override
+	public User findUserByName(String username) {
+		return userMapper.findUserByName(username);
+	}
+
 	
 
 }

@@ -1,9 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@include file="../../BaseTop.jsp"%>
 
 <!DOCTYPE HTML>
 <html>
 <head>
-<%@include file="../../BaseTop.jsp"%>
 <title>新办营业执照</title>
 <link href="${app }/css/newLicense.css" rel="stylesheet" />
 <style type="text/css">

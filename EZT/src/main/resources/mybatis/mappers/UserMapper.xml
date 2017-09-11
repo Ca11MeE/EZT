@@ -32,6 +32,18 @@
 		left join role_info ri
 		on ri.role_id=ur.role_id
 	</select>
+	
+	<select id="findUserByName" resultMap="userRM">
+		select
+		u.*,
+		ri.*
+		from
+		user u
+		left join user_role ur on u.user_id=ur.user_id
+		left join role_info ri
+		on ri.role_id=ur.role_id
+		where u.user_id=#{username}
+	</select>
 
 	<insert id="createUser">
 		insert into user(

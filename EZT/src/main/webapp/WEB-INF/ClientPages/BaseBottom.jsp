@@ -6,9 +6,6 @@
 		$('.submitFrm').submit();
 		return true;
 	}
-	function checkAll(item) {
-		$("."+item).attr("checked",$("#all").is(':checked') );
-	}
 	$("#valiimg").click(function(){
 		$(this).attr("src","/img/valiImg.action"+Math.random());
 	});

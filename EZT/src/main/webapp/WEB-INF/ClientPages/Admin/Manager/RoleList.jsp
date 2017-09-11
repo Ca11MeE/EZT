@@ -26,7 +26,7 @@
 <table id="ec_table" class="tableRegion" width="98%" style="font-size:16px;">
 	<thead>
 	<tr>
-		<td class="tableHeader"><input type="checkbox" id="all" name="selid" onclick="checkAll(roleId);" ></td>
+		<td class="tableHeader"><input type="checkbox" id="all" name="selid" onclick="checkAll('roleId');" ></td>
 		<td class="tableHeader">序号</td>
 		<td class="tableHeader">权限名称</td>
 		<td class="tableHeader">超级管理员权限</td>

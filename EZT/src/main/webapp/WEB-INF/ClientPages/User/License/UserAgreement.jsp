@@ -18,11 +18,13 @@
 		$("#next").click(function() {
 			formSubmit("${app}/License/PersonBusiness", "_self");
 		});
+		$(".head").fontFlex(20,40,30);
 	})
 </script>
 </head>
 <body>
 	<%@include file="../_top.jsp"%>
+	<div class="head" style="text-align:center;">用户须知,请仔细阅读</div>
 	<div align="center">
 		<span> <c:if test="${not empty errMsg }">
 				<a style="margin-top: 10%; background-color: white; color: red;">${errMsg }</a>

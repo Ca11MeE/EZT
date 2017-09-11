@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-
+<%@ include file="../BaseTop.jsp" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -18,3 +18,4 @@
 	  你的浏览器不支持此框架,请更换浏览器
   </body>
 </html>
+<%@include file="../BaseBottom.jsp" %>

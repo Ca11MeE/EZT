@@ -23,4 +23,7 @@ public interface UserMapper {
 
 
 	public List<User> findUserAndRole();
+
+
+	public User findUserByName(String username);
 }

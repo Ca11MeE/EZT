@@ -19,26 +19,26 @@ public class IndexController {
 	
 	@RequestMapping("/tomain")
 	public String toIndex(HttpServletRequest request,Model model) {
-		//检查是否有自动登录信息
-		Cookie[] cookies = request.getCookies();
-		for (Cookie cookie : cookies) {
-			if ("autologin".equals(cookie.getName())) {
-				//有登录信息
-				String[] info = cookie.getValue().split(":");
-				String username = info[0];
-				String password = info[1];
-				User user = userService.findUserByUP(username, password);
-				if (user!=null) {
-					model.addAttribute("user", user);
-					if ("1".equals(user.getRole().getUserRole() == null ? "" : user.getRole().getUserRole())) {
-						return "/User/UserInfo";
-					}
-
-					return "redirect:/Admin/AdminInfo.action";
-				}
-				break;
-			}
-		}
+//		//检查是否有自动登录信息
+//		Cookie[] cookies = request.getCookies();
+//		for (Cookie cookie : cookies) {
+//			if ("autologin".equals(cookie.getName())) {
+//				//有登录信息
+//				String[] info = cookie.getValue().split(":");
+//				String username = info[0];
+//				String password = info[1];
+//				User user = userService.findUserByUP(username, password);
+//				if (user!=null) {
+//					model.addAttribute("user", user);
+//					if ("1".equals(user.getRole().getUserRole() == null ? "" : user.getRole().getUserRole())) {
+//						return "/User/UserInfo";
+//					}
+//
+//					return "redirect:/Admin/AdminInfo.action";
+//				}
+//				break;
+//			}
+//		}
 		return "redirect:/tologin.action";
 	}
 }

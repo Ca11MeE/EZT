@@ -11,3 +11,11 @@
 <script  src="${app}/js/ItemFlex.js" type="text/javascript"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+<script type="text/javascript">
+	function checkAll(item) {
+		$("."+item).each(function(){
+			this.checked=$("#all").is(":checked");
+		});
+	}
+
+</script>

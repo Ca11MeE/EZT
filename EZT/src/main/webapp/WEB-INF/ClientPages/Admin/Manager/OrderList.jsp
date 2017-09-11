@@ -23,7 +23,7 @@
 <table id="ec_table" class="tableRegion" width="98%" style="font-size:16px;">
 	<thead>
 	<tr>
-		<td class="tableHeader"><input type="checkbox" id="all" name="selid"  ></td>
+		<td class="tableHeader"><input type="checkbox" id="all" name="selid" onclick="checkAll('orderId');" ></td>
 		<td class="tableHeader">序号</td>
 		<td class="tableHeader">申办人或申办公司名称</td>
 		<td class="tableHeader">公司名称</td>

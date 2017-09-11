@@ -34,7 +34,13 @@
 
 	<dependencies>
 
-
+<!-- Apache Shiro 权限架构 -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-all</artifactId>
+			<version>${shrio.version}</version>
+		</dependency>	
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
