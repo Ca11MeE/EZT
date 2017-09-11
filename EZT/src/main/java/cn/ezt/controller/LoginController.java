@@ -93,14 +93,21 @@ public class LoginController {
 		Subject subject = SecurityUtils.getSubject();
 		UsernamePasswordToken token=new UsernamePasswordToken(username, password);
 		try {
-			subject.login(token);
+//			subject.login(token);
 			//登陆成功
-			session.setAttribute("user", (User)subject.getPrincipal());
+//			session.setAttribute("user", (User)subject.getPrincipal());
+			User user = userService.findUserByUP(remindUserName, password);
+			if (user!=null) {
+				
 			Role userRole = ( (User)subject.getPrincipal()).getRole();
 			if ("1".equals(userRole.getUserRole() == null ? "" : userRole.getUserRole())) {
 				return "/User/UserInfo";
 			}
 			return "redirect:/Admin/AdminInfo.action";
+			}else {
+				model.addAttribute("errMsg", "用户名或密码不正确");
+				return "/login";
+			}
 		} catch (AuthenticationException e) {
 			//登录失败
 			e.printStackTrace();

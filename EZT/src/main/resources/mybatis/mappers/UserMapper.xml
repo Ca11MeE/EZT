@@ -42,7 +42,7 @@
 		left join user_role ur on u.user_id=ur.user_id
 		left join role_info ri
 		on ri.role_id=ur.role_id
-		where u.user_id=#{username}
+		where u.username=#{username}
 	</select>
 
 	<insert id="createUser">

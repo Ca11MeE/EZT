@@ -63,7 +63,7 @@
 				/toregist.action=anon
 				/tologin.action =anon
 				/tomain.action =anon
-				/**= authc
+				/Admin/**= authc
 			</value>
 		</property>
 
